@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+  background-color: #fff6f3;
+}
+
+.navbar {
+  height: 80px;
+  background-color: #edc079;
+}
+
+.container-fluid {
+  margin: 0 110px 0 110px;
+}
+
+#logo {
+  margin-right: 25px;
+}
+
+.navbar-brand {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  color: #181717;
+  text-decoration: none;
+}
+
+.navbar-brand:hover {
+  color: #181717 !important;
+}
+.nav-item button {
+  font-weight: 700;
+  background-color: #fff6f3;
+  color: #181717;
+  border: none;
+}
+
+.nav-item button:hover {
+  background-color: #181717;
+  color: #fff6f3;
+}
+
+#mynavbar {
+  align-items: right;
+  text-align: right;
+}
+
+#icon {
+  font-size: 33px;
+  margin-right: 5px;
+  color: #181717;
+  font-weight: 500;
+}
+
+#profile {
+  margin-right: 5px;
+  margin-left: 0px;
+  font-size: 27px;
+}
+
+.card-body p {
+  display: flex;
+  align-items: center;
+}
+#cover {
+  height: 200px;
+  margin-top: 78px;
+}
+
+.container {
+  font-family: "Poppins", sans-serif;
+}
+
+.card {
+  background-color: #fff6f3;
+  border: none !important;
+}
+
+.card-body {
+  background-color: #fff6f3;
+  border: none !important;
+  font-size: 18px;
+}
+
+#judul {
+  font-weight: 700;
+  font-style: italic;
+  font-size: 50px;
+  color: #181717;
+  margin-bottom: 30px;
+}
+
+.nav {
+  margin-left: 0px;
+  text-align: left;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #181717;
+}
+
+.nav-link:hover {
+  text-decoration: none;
+  color: #181717;
+}
+
+#genre {
+  height: fit-content;
+}
+
+#genredetail {
+  height: fit-content;
+}
+
+#listsatu {
+  margin-left: -10px;
+  width: 120px;
+  text-align: left;
+}
+
+#listsatu,
+#listdua,
+#listsatugenre {
+  font-weight: 600;
+}
+
+#listtigagenre {
+  font-weight: 400;
+  font-style: italic;
+}
+
+.container-fluida {
+  margin-left: 6px;
+  margin-top: 10px;
+}
+
+#listsatugenre {
+  width: 120px;
+}
+
+#listtigagenre {
+  margin-left: 9px;
+}
+
+.nav-link a {
+  margin-left: 0px;
+  text-align: left;
+}
+
+#review {
+  margin-left: 23px;
+}
+
+.card-bodybawah {
+  margin-top: 4px;
+  margin: 0 0 0 23px;
+}
+
+.button button {
+  background-color: #edc079;
+  border: none;
+  color: #181717;
+  border-radius: 20px;
+  width: 120px;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.button button:hover {
+  background-color: #181717;
+  color: #fff6f3;
+}
+
+#comments {
+  margin-top: 50px;
+}
+
+.comment-group {
+  height: fit-content;
+}
+
+.card-bodycomment {
+  background-color: #ffffff;
+  padding: 20px;
+  border-color: #868686 !important;
+  border: solid;
+  border-radius: 20px;
+  border-width: 0.1px;
+  height: fit-content;
+  display: flex;
+}
