@@ -41,29 +41,5 @@ CREATE TABLE comments (
     FOREIGN KEY (book_id) REFERENCES books(book_id)
 );
 
--- Dump Data
 
--- Insert data into users table
-INSERT INTO users (name, email, password) VALUES
-('John Doe', 'john.doe@example.com', 'password123'),
-('Jane Smith', 'jane.smith@example.com', 'password456'),
-('Alice Johnson', 'alice.johnson@example.com', 'password789');
-
--- Insert data into genres table
-INSERT INTO genres (genre_name) VALUES
-('Self Improvement'),
-('Horror'),
-('Romance');
-
--- Insert data into books table
-INSERT INTO books (genre_id, title, author, pages, synopsis) VALUES
-(1, 'The Power of Habit', 'Charles Duhigg', 371, 'An exploration of the science behind why habits exist and how they can be changed.'),
-(2, 'It', 'Stephen King', 1138, 'A horror novel about seven children who are terrorized by a malevolent entity.'),
-(3, 'Pride and Prejudice', 'Jane Austen', 432, 'A romantic novel that charts the emotional development of the protagonist Elizabeth Bennet.');
-
--- Insert data into comments table
-INSERT INTO comments (user_id, book_id, comment) VALUES
-(1, 1, 'This book really helped me change my habits for the better.'),
-(2, 2, 'Absolutely terrifying! Couldn\'t put it down.'),
-(3, 3, 'A timeless classic with a beautiful love story.');
 
