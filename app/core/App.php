@@ -11,6 +11,11 @@ class App {
 
         if(file_exists("../app/controllers/$url[0].php")) {
             $this->controller = $url[0];
+
+            if(!isset($_SESSION['user_id'])) {
+                $this->controller = $this->checkAuth($this->controller);
+            }
+            
             unset($url[0]);
         } 
 
@@ -38,5 +43,17 @@ class App {
             $url = explode('/', $url);
             return $url;
         }
+    }
+
+    public function checkAuth($controller) {
+        $protected = [
+            'BookController'
+        ];
+
+        if(in_array($controller, $protected)) {
+            return 'Home';
+        } 
+
+        return $controller;
     }
 }
