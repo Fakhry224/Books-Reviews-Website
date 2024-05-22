@@ -26,7 +26,7 @@ class BookModel {
 
     public function getBookDetail($book_id) {
         $sql = "
-            SELECT b.title, b.pages, b.author, g.genre_name, b.synopsis FROM books b
+            SELECT b.title, b.pages, b.author, g.genre_name, b.synopsis, b.img_path FROM books b
             JOIN genres g ON b.genre_id = g.genre_id WHERE b.book_id = ?
         ";
 
