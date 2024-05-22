@@ -2,6 +2,16 @@
 
 body {
   background-color: #fff6f3;
+  font-family: poppins;
+  height: 100vw;
+}
+
+h3 {
+  font-weight: 600;
+}
+
+.content {
+  height: 100vw;
 }
 
 .navbar {
@@ -28,16 +38,18 @@ body {
 .navbar-brand:hover {
   color: #181717 !important;
 }
+
 .nav-item button {
   font-weight: 700;
   background-color: #fff6f3;
   color: #181717;
   border: none;
+  border-radius: 15px;
 }
 
 .nav-item button:hover {
-  background-color: #181717;
-  color: #fff6f3;
+  background-color: #181717 !important;
+  color: #fff6f3 !important;
 }
 
 #mynavbar {
@@ -58,13 +70,52 @@ body {
   font-size: 27px;
 }
 
+.list-genre {
+  background-color: #181717;
+  width: 250px;
+  height: 100vw !important;
+  padding: 25px;
+}
+
+.listgenre-body {
+  margin-top: 85px;
+}
+
+.genre:hover {
+  color: #edc079;
+}
+
+#judulgenre {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: #edc079;
+  margin-bottom: 20px;
+}
+
+.list-genre a {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: #fff6f3;
+  text-decoration: none !important;
+}
+
 .card-body p {
   display: flex;
   align-items: center;
 }
+
+.image-container {
+  margin: 80px 0 10px 0;
+  height: 350px;
+  background-color: #fff8ed;
+  border-radius: 0 0 15px 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 #cover {
-  height: 200px;
-  margin-top: 78px;
+  width: 80%;
+  height: 350px;
+  object-fit: fill;
 }
 
 .container {
@@ -149,7 +200,8 @@ body {
 }
 
 #review {
-  margin-left: 23px;
+  margin: 0 0 10px 20px;
+  padding-left: 5px;
 }
 
 .card-bodybawah {
