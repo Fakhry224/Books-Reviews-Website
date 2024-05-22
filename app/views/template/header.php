@@ -17,5 +17,6 @@
     ></script>
     <link rel="stylesheet" href="<?= BASEURL . $data['css'];?>.css">
     <title><?= $data['title'] ?></title>
+
   </head>
   <body>
