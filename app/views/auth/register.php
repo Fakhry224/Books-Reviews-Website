@@ -1,4 +1,9 @@
 <div class="wrapper">
+  <div class="row">
+      <div class="col">
+        <?php Flasher::flash(); ?>
+      </div>
+  </div>
   <div class="container main">
     <div class="box">
       <div class="input-box">
