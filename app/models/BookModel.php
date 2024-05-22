@@ -9,13 +9,17 @@ class BookModel {
 
     }
 
-    public function getAllComment() {
+    public function getAllComment($book_id) {
         $sql = "
             SELECT u.name, c.comment FROM comments c
             JOIN users u ON c.user_id = u.user_id
+            WHERE c.book_id = ?
         ";
 
         $this->db->query($sql);
+        $this->db->bind([
+            ['value' => $book_id]
+        ]);
         
         return $this->db->resultSet();
     }
