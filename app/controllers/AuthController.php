@@ -22,14 +22,16 @@ class AuthController extends Controller {
                 $user = $userModel->login($data);
                 
                 if ($user) {
-                    $_SESSION['user_id'] = $user['id'];
+                    $_SESSION['user_id'] = $user['user_id'];
                     $_SESSION['user_name'] = $user['name'];
-                    Flasher::setFlash('Successfully!', 'Login', 'success');
+                    Flasher::setFlash('Login Successfully', 'Success', 'success');
                     header('Location: ' . BASEURL . '/Home/index');
+                    exit();
                 } else {
                     $data['error'] = 'Invalid email or password';
                     Flasher::setFlash('Login Failed', $data['error'], 'danger');
                     header('Location: ' . BASEURL . '/auth/login');
+                    exit();
                 }
             }
         } else {
@@ -52,23 +54,38 @@ class AuthController extends Controller {
 
                 if (empty($data['email']) || empty($data['name']) || empty($data['password']) || empty($data['confirm_password'])) {
                     $data['error'] = 'Please fill out all fields';
+                    Flasher::setFlash('Register Failed', $data['error'], 'danger');
+                    header('Location: ' . BASEURL . '/AuthController/register');
+                    exit();
                 } elseif ($data['password'] != $data['confirm_password']) {
                     $data['error'] = 'Passwords do not match';
+                    Flasher::setFlash('Register Failed', $data['error'], 'danger');
+                    header('Location: ' . BASEURL . '/AuthController/register');
+                    exit();
                 } elseif ($this->model('UserModel')->findUserByEmail($data['email'])) {
                     $data['error'] = 'Email is already taken';
+                    Flasher::setFlash('Register Failed', $data['error'], 'danger');
+                    header('Location: ' . BASEURL . '/AuthController/register');
+                    exit();
                 }
-
+                
                 if (empty($data['error'])) {
                     $userModel = $this->model('UserModel');
                     if ($userModel->register($data)) {
                         Flasher::setFlash('Success', 'Register', 'success');
                         header('Location: ' . BASEURL . '/auth/login');
+                        exit();
                     } else {
                         $data['error'] = 'Something went wrong. Please try again';
+                        Flasher::setFlash('Register Failed', $data['error'], 'danger');
+                        header('Location: ' . BASEURL . '/AuthController/register');
+                        exit();
                     }
                 }
 
-                $this->view('auth/register', $this->data_register);
+                $this->view('template/header', $this->data_register);
+                $this->view('auth/register', $data);
+                $this->view('template/footer');
             } else {
                 echo 'Field is empty';
             }
@@ -85,5 +102,6 @@ class AuthController extends Controller {
         unset($_SESSION['user_name']);
         session_destroy();
         header('Location: ' . BASEURL . '/auth/login');
+        exit();
     }
 }
